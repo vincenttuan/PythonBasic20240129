@@ -6,9 +6,9 @@ pay = 100
 exchange = pay - price
 print(exchange)           # 77
 fifty = exchange // 50    # 77 // 50 = 1 個 50 元
-exchange = exchange % 50  # 77 % 50 = 27
+exchange = exchange % 50  # 77 % 50 = 27  (exchange %= 50)
 ten = exchange // 10      # 27 // 10 = 2 個 10 元
-exchange = exchange % 10  # 27 % 10 = 7
+exchange = exchange % 10  # 27 % 10 = 7  (exchange %= 10)
 five = exchange // 5      # 7 // 5 = 1 個 5 元
 one = exchange % 5        # 7 % 5 = 2 個 1 元
 
