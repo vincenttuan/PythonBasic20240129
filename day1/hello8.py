@@ -11,4 +11,10 @@ print(type(h), type(w))
 bmi = w / math.pow(h/100, 2)  # w / (h/100)**2
 print(bmi)
 
-
+# 判斷 bmi
+if bmi <= 18:
+    print('過輕')
+elif bmi > 23:
+    print('過重')
+else:
+    print('正常')
