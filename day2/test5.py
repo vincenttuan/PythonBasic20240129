@@ -9,7 +9,15 @@ print(h1, h2, h3)
 w1, w2, w3 = float(w_array[0]), float(w_array[1]), float(w_array[2])
 print(w1, w2, w3)
 bmi1, bmi2, bmi3 = w1/h1**2, w2/h2**2, w3/h3**2
-print(bmi1, bmi2, bmi3)
+# print(bmi1, bmi2, bmi3)
+if 18 < bmi1 <= 23:
+    print(bmi1)
+
+if 18 < bmi2 <= 23:
+    print(bmi2)
+
+if 18 < bmi3 <= 23:
+    print(bmi3)
 
 
 
