@@ -6,14 +6,17 @@ def getBmi(h, w):
     bmi = w / (h/100)**2
     return bmi  # 將 bmi 回傳
 
+def getResult(bmi):
+    if bmi <= 18:
+        return "過輕"
+    elif bmi > 23:
+        return "過重"
+    else:
+        return "正常"
+
 def getBmiAndResult(h, w):
     bmi = getBmi(h, w)
-    if bmi <= 18:
-        result = "過輕"
-    elif bmi > 23:
-        result = "過重"
-    else:
-        result = "正常"
+    result = getResult(bmi)
     return bmi, result
 
 if __name__ == '__main__':  # python 的主程式寫法
