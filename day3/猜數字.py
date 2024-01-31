@@ -9,7 +9,7 @@ if __name__ == '__main__':
     count = 0  # 猜的次數
     while True:
         # 請玩家猜
-        user_guess = int(input('玩家請在 1~9 之間猜一個數字:'))
+        user_guess = int(input('玩家請在 1~9 猜一個數字:'))
         count = count + 1
         if user_guess > answer:
             print("猜大了")
