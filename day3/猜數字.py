@@ -20,7 +20,7 @@ if __name__ == '__main__':
         elif user_guess < answer:
             print("猜小了")
         else:
-            print("恭喜答對了, 總共猜了 %d 次" % count)
+            print("恭喜玩家答對了, 總共猜了 %d 次" % count)
             break
         # 請電腦猜
         pc_guess = random.randint(1, 9)
