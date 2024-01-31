@@ -31,8 +31,10 @@ if __name__ == '__main__':
         print('電腦 1~9 所猜的數字是 %d' % pc_guess)
         if pc_guess > answer:
             print("電腦猜大了")
+            max = user_guess - 1
         elif pc_guess < answer:
             print("電腦猜小了")
+            min = user_guess + 1
         else:
             print("電腦答對了, 玩家輸了")
             break
