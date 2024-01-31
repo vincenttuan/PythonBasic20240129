@@ -20,4 +20,12 @@ if __name__ == '__main__':
         else:
             print("玩家答對了, 答案是: %d" % answer)
             break
-
+        # 電腦猜
+        pc_guess = random.randint(min, max)
+        if pc_guess > answer:
+            max = pc_guess - 1
+        elif pc_guess < answer:
+            min = pc_guess + 1
+        else:
+            print("電腦答對了, 答案是: %d" % answer)
+            break
