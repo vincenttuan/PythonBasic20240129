@@ -10,6 +10,10 @@ if __name__ == '__main__':
     while True:
         # 請玩家猜
         user_guess = int(input('玩家請在 1~9 猜一個數字:'))
+        # 判斷數字是否是在 1~9 的範圍內  ?
+        if user_guess < 1 or user_guess > 9:
+            print("數字範圍不正確, 請重猜~")
+            continue
         count = count + 1
         if user_guess > answer:
             print("猜大了")
