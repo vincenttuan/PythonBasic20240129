@@ -22,7 +22,7 @@ if __name__ == '__main__':
             break
         # 電腦猜
         pc_guess = random.randint(min, max)
-        print('電腦在 %d ~ %d 猜一數字:' % (min, max))
+        print('電腦在 %d ~ %d 猜一數字: %d' % (min, max, pc_guess))
         if pc_guess > answer:
             max = pc_guess - 1
         elif pc_guess < answer:
