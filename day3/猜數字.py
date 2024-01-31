@@ -22,3 +22,13 @@ if __name__ == '__main__':
         else:
             print("恭喜答對了, 總共猜了 %d 次" % count)
             break
+        # 請電腦猜
+        pc_guess = random.randint(1, 9)
+        print('電腦 1~9 所猜的數字是 %d' % pc_guess)
+        if pc_guess > answer:
+            print("電腦猜大了")
+        elif pc_guess < answer:
+            print("電腦猜小了")
+        else:
+            print("電腦答對了, 玩家輸了")
+            break
