@@ -18,6 +18,6 @@ if __name__ == '__main__':
         elif user_guess < answer:
             min = user_guess + 1
         else:
-            print("玩家答對了")
+            print("玩家答對了, 答案是: %d" % answer)
             break
 
