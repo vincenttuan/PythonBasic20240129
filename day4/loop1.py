@@ -6,3 +6,7 @@ for i in range(1, 6):  # 印出 1~小於6的資料
 print()  # 換行
 for i in range(1, 6):
     print(i, "Python", end=" ")  # 印出5個 Python 資料
+# ---------------------------------------
+print()  # 換行
+for i in range(1, 10, 2):
+    print(i, end=' ')
