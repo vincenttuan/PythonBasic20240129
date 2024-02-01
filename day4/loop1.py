@@ -10,3 +10,9 @@ for i in range(1, 6):
 print()  # 換行
 for i in range(1, 10, 2):
     print(i, end=' ')
+# ---------------------------------------
+print()  # 換行
+scores = [100, 90, 50, 30, 60]
+for score in scores:
+    result = "及格" if score >= 60 else "不及格"
+    print(score, result, end=' ')
