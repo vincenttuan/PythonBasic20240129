@@ -16,4 +16,18 @@ ice_options = {
     0: "去冰", 1: "少冰", 2: "正常冰"
 }
 
+def show_menu():
+    print('飲料單')
+    for key, item in menu.items():
+        print(f'{key}, {item["name"]} - ${item["price"]}')
+
+# 偏好選擇
+def get_preference(options, message):
+    print(message)
+    for key, item in options.items():
+        print(f'{key}: {item}')
+    choice = int(input('請選擇:'))
+    if choice in options:
+        return options[choice]
+
 
