@@ -19,7 +19,8 @@ def show_menu():
 
 
 def order():
-    total_price = 0
+    total_price = 0  # 記錄總金額
+    order_items = []  # 紀錄已點的餐點
     # -------------------------------------------------------------------------------
     while True:
         show_menu()
@@ -31,6 +32,8 @@ def order():
             item_price = menu[choice]["price"]
             total_price += item_price  # total_price = total_price + item_price
             print(f'您點了{item_name} 單價 ${item_price} 累計金額 ${total_price}')
+            # 將餐點加入到 order_items 中
+            order_items.append((item_name, item_price))  # 紀錄餐點名稱與價格
             time.sleep(1)  # 模擬處理時間
             choice = input('是否要繼續點餐(y/n)?')
             if choice == 'n':
