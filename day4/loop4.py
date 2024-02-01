@@ -9,6 +9,7 @@ menu = {
     3: {"name": "雙層牛肉", "price": 40},
     4: {"name": "可樂", "price": 20},
     5: {"name": "薯條", "price": 30},
+    6: {"name": "蘋果派", "price": 25},
 }
 
 def show_menu():
