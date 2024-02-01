@@ -4,11 +4,11 @@ import time
 print('歡迎光臨線上點餐系統')
 
 menu = {
-    "1": {"name": "大麥克", "price": 70},
-    "2": {"name": "麥香魚", "price": 50},
-    "3": {"name": "雙層牛肉", "price": 40},
-    "4": {"name": "可樂", "price": 20},
-    "5": {"name": "薯條", "price": 30},
+    1: {"name": "大麥克", "price": 70},
+    2: {"name": "麥香魚", "price": 50},
+    3: {"name": "雙層牛肉", "price": 40},
+    4: {"name": "可樂", "price": 20},
+    5: {"name": "薯條", "price": 30},
 }
 
 def show_menu():
