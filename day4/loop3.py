@@ -22,9 +22,11 @@ while True:
         while current_floor != target_floor:
             print("電梯 %s 當前樓層 %d 樓" % (direction, current_floor))
             diff = abs(current_floor - target_floor)
-            if diff > 50:
-                time.sleep(0.1)
+            if diff > 20:
+                time.sleep(0.05)
             elif diff > 10:
+                time.sleep(0.2)
+            elif diff > 5:
                 time.sleep(0.5)
             else:
                 time.sleep(1)
