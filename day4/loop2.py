@@ -5,7 +5,7 @@ print("本棟大樓有1~7層")
 target_floor = int(input('請輸入樓層:'))
 for floor in range(1, 8):
     print('電梯上樓', floor)
-    time.sleep(1)
+    time.sleep(1)  # 停一秒後才繼續執行
     if floor == target_floor:
         print('電梯到達指定樓層, 請出電梯')
         break
