@@ -42,7 +42,8 @@ def order():
     print(f'點餐完畢, 總金額為: ${total_price} 請至櫃台結帳, 謝謝光臨 !')
 
 if __name__ == '__main__':
+    print(menu.items())  # 會包含 key + item(value)
+    print(menu.values())  # 只會有 item(value), 但是沒有 key
     order()
-    #print(menu.items())  # 會包含 key + item(value)
-    #print(menu.values())  # 只會有 item(value), 但是沒有 key
+
 
