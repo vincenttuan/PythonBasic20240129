@@ -43,6 +43,9 @@ def order():
             continue
     #-------------------------------------------------------------------------------
     print(f'點餐完畢, 總金額為: ${total_price} 請至櫃台結帳, 謝謝光臨 !')
+    print('點餐明細:')
+    for item_name, item_price in order_items:
+        print(f'{item_name} - ${item_price}')
 
 if __name__ == '__main__':
     print(menu.items())  # 會包含 key + item(value)
