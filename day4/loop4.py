@@ -32,6 +32,9 @@ def order():
             total_price += item_price  # total_price = total_price + item_price
             print(f'您點了{item_name} 單價 ${item_price} 累計金額 ${total_price}')
             time.sleep(1)  # 模擬處理時間
+            choice = input('是否要繼續點餐(y/n)?')
+            if choice == 'n':
+                break
         else:
             print('無此餐點, 請重新輸入')
             continue
