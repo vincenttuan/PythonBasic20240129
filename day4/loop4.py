@@ -43,3 +43,6 @@ def order():
 
 if __name__ == '__main__':
     order()
+    #print(menu.items())  # 會包含 key + item(value)
+    #print(menu.values())  # 只會有 item(value), 但是沒有 key
+
