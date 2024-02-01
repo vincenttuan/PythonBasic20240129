@@ -17,5 +17,26 @@ def show_menu():
         # print("%s. %s - $%d" % (key, item["name"], item["price"]))
         print(f'{key}. {item["name"]} - ${item["price"]}')
 
+
+def order():
+    total_price = 0
+    # -------------------------------------------------------------------------------
+    while True:
+        show_menu()
+        choice = int(input('請輸入餐點號碼(輸入0結束點餐):'))
+        if choice == 0:
+            break
+        if choice in menu:  # choice 是在 menu 中所定義的 key, 也就是 1, 2, 3, 4, 或 5
+            item_name = menu[choice]["name"]
+            item_price = menu[choice]["price"]
+            total_price += item_price  # total_price = total_price + item_price
+            print(f'您點了{item_name} 單價 ${item_price} 累計金額 ${total_price}')
+            time.sleep(1)  # 模擬處理時間
+        else:
+            print('無此餐點, 請重新輸入')
+            continue
+    #-------------------------------------------------------------------------------
+    print(f'點餐完畢, 總金額為: ${total_price} 請至櫃台結帳, 謝謝光臨 !')
+
 if __name__ == '__main__':
-    show_menu()
+    order()
