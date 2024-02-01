@@ -20,7 +20,7 @@ while True:
             continue
 
         while current_floor != target_floor:
-            print("電梯 %s 當前樓層 %d 樓" %(direction, current_floor))
+            print("電梯 %s 當前樓層 %d 樓" % (direction, current_floor))
             time.sleep(1)
             if direction == '上樓':
                 current_floor += 1  # 每次加一
