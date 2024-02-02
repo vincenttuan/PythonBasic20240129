@@ -35,6 +35,5 @@ ax2.legend(loc='upper right')
 plt.title('stock chart')
 
 # 顯示圖形
-plt.tight_layout()
 plt.show()
 
