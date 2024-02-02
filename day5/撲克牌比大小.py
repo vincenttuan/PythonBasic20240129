@@ -43,9 +43,11 @@ if __name__ == '__main__':
         # 計算損益
         if (choice == 1 and player_value > 7) or (choice == 2 and player_value < 7):
             player_money += bet
+            computer_money -= bet
             print(f'玩家贏 {bet} 元, 目前餘額: {player_money}')
         else:
             player_money -= bet
+            computer_money += bet
             print(f'玩家輸 {bet} 元, 目前餘額: {player_money}')
 
     print("Game Over !")
