@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 # 學生成績
 # 繪圖需要安裝繪圖套件
 # pip install matplotlib
-students = {'劉一': 90, '陳二': 85, '張三': 100, '李四': 45, '王五': 72}
+students = {'John': 90, 'Mary': 85, 'Jack': 100, 'Rose': 45, 'Helen': 72}
 
 if __name__ == '__main__':
      print(students)
@@ -15,8 +15,8 @@ if __name__ == '__main__':
      # 創建長條圖
      plt.bar(names, scores, color='skyblue')
      # 設定圖形標籤與標題
-     plt.xlabel('學生名稱')
-     plt.ylabel('分數')
-     plt.title('學生成績圖表')
+     plt.xlabel('student name')
+     plt.ylabel('score')
+     plt.title('student score chart')
      # 顯示圖形
      plt.show()
