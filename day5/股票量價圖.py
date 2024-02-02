@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import random
 
-range_size = 10
+range_size = 20
 # 模擬股票日期
 dates = [f'2024-1-{i+1}' for i in range(range_size)]
 print(dates)
@@ -30,6 +30,10 @@ ax2.set_ylabel('volume', color='g')
 ax2.bar(dates, volumes, color='g', alpha=0.3, label='close')
 ax2.tick_params(axis='y', labelcolor='g')
 ax2.legend(loc='upper right')
+
+# 設置 y 軸從 0 開始
+ax1.set_ylim(0, max(prices) * 1.2)
+ax2.set_ylim(0, max(volumes) * 2)
 
 # 設置圖形標題
 plt.title('stock chart')
