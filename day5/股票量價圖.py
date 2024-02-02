@@ -24,7 +24,7 @@ print(ax1, ax2)
 # 子圖(價格圖)
 ax1.set_xlabel('date')
 ax1.set_ylabel('price', color='b')
-ax1.plot(dates, prices, 'b-', label='price')
+ax1.plot(dates, prices, 'b-', label='price', marker='o')
 ax1.tick_params(axis='y', labelcolor='b')
 ax1.legend(loc='upper left')
 
