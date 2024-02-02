@@ -13,7 +13,9 @@ if __name__ == '__main__':
      print(scores)
 
      # 創建長條圖
-     plt.bar(names, scores, color='skyblue')
+     # plt.bar(names, scores, color='skyblue')
+     # 創建折線圖
+     plt.plot(names, scores, 'o-', color='red')
      # 設定圖形標籤與標題
      plt.xlabel('student name')
      plt.ylabel('score')
