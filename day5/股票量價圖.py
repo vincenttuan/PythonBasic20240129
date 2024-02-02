@@ -1,4 +1,7 @@
 # 股票價量圖
+# pip install matplotlib
+# pip install mplcursors
+
 import matplotlib.pyplot as plt
 import random
 
