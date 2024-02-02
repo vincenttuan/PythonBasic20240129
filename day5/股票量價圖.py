@@ -4,6 +4,7 @@
 
 import matplotlib.pyplot as plt
 import random
+import mplcursors
 
 range_size = 20
 # 模擬股票日期
@@ -37,6 +38,10 @@ ax2.legend(loc='upper right')
 # 設置 y 軸從 0 開始
 ax1.set_ylim(0, max(prices) * 1.2)
 ax2.set_ylim(0, max(volumes) * 2)
+
+# 利用 mplcursors 來顯示資料
+cursor = mplcursors.cursor(hover=True)
+cursor.connect("add", lambda sel: sel.annotation.set_text(f"Price: {prices[sel.target.index]}\nVolume: {volumes[sel.target.index]}"))
 
 # 設置圖形標題
 plt.title('stock chart')
