@@ -29,7 +29,7 @@ if __name__ == '__main__':
             print('金額過大請重新下注~')
             continue
         # 選擇大小
-        choice = int(input('請選擇比大(1)還是比小(2):'))
+        choice = int(input('請選擇比 7 大(1)還是比 7 小(2):'))
         if choice < 1 or choice > 2:
             print('選擇錯誤請重新選擇')
             continue
