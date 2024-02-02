@@ -1,4 +1,7 @@
 # 利用 twstock 來進行買賣點分析
+# 需要安裝套件
+# pip install twstock
+# pip install lxml
 '''
 四大買賣點為:
 1.量大收紅/量大收黑
