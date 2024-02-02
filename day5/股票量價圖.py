@@ -27,8 +27,14 @@ ax1.legend(loc='upper left')
 # 子圖(成交量圖)
 ax2.set_xlabel('date')
 ax2.set_ylabel('volume', color='g')
-ax2.plot(dates, volumes, 'b-', label='close')
+ax2.bar(dates, volumes, color='g', alpha=0.3, label='close')
 ax2.tick_params(axis='y', labelcolor='g')
 ax2.legend(loc='upper right')
 
+# 設置圖形標題
+plt.title('stock chart')
+
+# 顯示圖形
+plt.tight_layout()
+plt.show()
 
