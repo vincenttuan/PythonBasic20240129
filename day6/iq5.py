@@ -45,9 +45,11 @@ if __name__ == '__main__':
     prev_button = tk.Button(root, text="上一題", command=lambda: update_image(-1))
     prev_button.pack(side=tk.LEFT, padx=10, pady=10)
 
+    # 設定所選的 option 答案
+    answer_var = tk.StringVar(value='None')
     options_frame = tk.Frame(root)  # 用來放置多組的 radiobuttons
     for option in ['A', 'B', 'C', 'D', 'E', 'F']:
-        rb = tk.Radiobutton(options_frame, text=option)
+        rb = tk.Radiobutton(options_frame, text=option, variable=answer_var, value=option)
         rb.pack(side=tk.LEFT, padx=10)
     options_frame.pack(pady=10)
 
