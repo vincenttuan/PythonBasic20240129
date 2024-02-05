@@ -9,7 +9,12 @@ import tkinter as tk
 from PIL import ImageTk, Image
 
 def update_image(index):
-    pass
+    image_path = '{}.png'.format(index)
+    img = Image.open(image_path)  # 取得 image 圖像物件
+    img = img.resize((950, 400))
+    photo = ImageTk.PhotoImage(img)  # 轉成可以放在 tkinter 的資料類型
+    image_label.config(image=photo)
+    image_label.image = photo
 
 
 if __name__ == '__main__':
