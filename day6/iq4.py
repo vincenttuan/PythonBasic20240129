@@ -13,8 +13,10 @@ def update_image(delta):
     current_image += delta
     print(current_image)
     # 確保 current_image 在合法的範圍(1~20)
-    if current_image <= 0 or current_image > total_images:
-        return
+    if current_image <= 0:
+        current_image = 1
+    elif current_image > total_images:
+        current_image = total_images
 
     root.title('IQ 測驗 {}/{}'.format(current_image, total_images))
     image_path = '{}.png'.format(current_image)
