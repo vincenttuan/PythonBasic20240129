@@ -10,8 +10,9 @@ user = {1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: '', 10: '',
 # 初始化分數, 每一題答對的分數
 score, point = 0, 9
 
-# 使用者寫答案
+# 使用者寫答案(1~20題)
 user[1] = 'F'
+user[2] = 'C'
 
 # 遍歷使用者的答案(question: 題號, user_answer: 答案
 for question, user_answer in  user.items():
