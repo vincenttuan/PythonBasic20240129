@@ -8,13 +8,20 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 
-def update_image(index):
-    image_path = '{}.png'.format(index)
+def update_image(delta):
+    global current_image
+    current_image += delta
+    # 確保 current_image 在合法的範圍(1~20)
+    if current_image <= 0 or current_image > total_images:
+        return
+
+    image_path = '{}.png'.format(current_image)
     img = Image.open(image_path)  # 取得 image 圖像物件
     img = img.resize((950, 400))
     photo = ImageTk.PhotoImage(img)  # 轉成可以放在 tkinter 的資料類型
     image_label.config(image=photo)
     image_label.image = photo
+
 
 
 if __name__ == '__main__':
@@ -36,7 +43,7 @@ if __name__ == '__main__':
     next_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
     # 顯示第一題的圖
-    update_image(1)
+    update_image(0)
 
     # 啟動視窗
     root.mainloop()
