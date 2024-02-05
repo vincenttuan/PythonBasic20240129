@@ -11,7 +11,6 @@ from PIL import ImageTk, Image
 def update_image(delta):
     global current_image
     current_image += delta
-    print(current_image)
     # 確保 current_image 在合法的範圍(1~20)
     if current_image <= 0:
         current_image = 1
