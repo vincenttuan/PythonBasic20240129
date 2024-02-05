@@ -16,8 +16,7 @@ if __name__ == '__main__':
     base_url = 'http://192.168.1.85/python/iq/{}.png'
     for i in range(1, 21):  # 1~20
         image_url = base_url.format(i)
-        # file_name = "{}.png".format(i)
-        file_name = f'{i}.png'
+        file_name = f'{i}.png'  # 等同 file_name = "{}.png".format(i)
         # print(image_url)
         download_image(image_url, file_name)
 
