@@ -11,6 +11,7 @@ from PIL import ImageTk, Image
 def update_image(delta):
     global current_image
     current_image += delta
+    print(current_image)
     # 確保 current_image 在合法的範圍(1~20)
     if current_image <= 0 or current_image > total_images:
         return
@@ -37,9 +38,9 @@ if __name__ == '__main__':
     image_label.pack()
 
     # 建立按鈕
-    prev_button = tk.Button(root, text="上一題", command=lambda: update_image(1))
+    prev_button = tk.Button(root, text="上一題", command=lambda: update_image(-1))
     prev_button.pack(side=tk.LEFT, padx=10, pady=10)
-    next_button = tk.Button(root, text="下一題", command=lambda: update_image(-1))
+    next_button = tk.Button(root, text="下一題", command=lambda: update_image(1))
     next_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
     # 顯示第一題的圖
