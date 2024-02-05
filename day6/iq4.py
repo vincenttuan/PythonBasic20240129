@@ -37,9 +37,9 @@ if __name__ == '__main__':
     image_label.pack()
 
     # 建立按鈕
-    prev_button = tk.Button(root, text="上一題 ")
+    prev_button = tk.Button(root, text="上一題", command=lambda: update_image(1))
     prev_button.pack(side=tk.LEFT, padx=10, pady=10)
-    next_button = tk.Button(root, text="下一題 ")
+    next_button = tk.Button(root, text="下一題", command=lambda: update_image(-1))
     next_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
     # 顯示第一題的圖
