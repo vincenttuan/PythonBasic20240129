@@ -16,6 +16,7 @@ def update_image(delta):
     if current_image <= 0 or current_image > total_images:
         return
 
+    root.title('IQ 測驗 {}/{}'.format(current_image, total_images))
     image_path = '{}.png'.format(current_image)
     img = Image.open(image_path)  # 取得 image 圖像物件
     img = img.resize((950, 400))
