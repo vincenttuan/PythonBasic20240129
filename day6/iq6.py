@@ -1,3 +1,4 @@
+import random
 # 答案比對
 # 標準答案 (1: 'F') -> 題號: 答案
 ans = {1: 'F', 2: 'D', 3: 'B', 4: 'A', 5: 'E', 6: 'E', 7: 'B', 8: 'B', 9: 'F', 10: 'C',
@@ -14,6 +15,12 @@ score, point = 0, 9
 user[1] = 'F'
 user[2] = 'C'
 
+# 模擬使用者寫答案(1~20題)
+for i in range(1, 21):
+    user[i] = random.choice(['A', 'B', 'C', 'D', 'E', 'F'])
+
+print('標準答案:', ans)
+print('學生答案:', user)
 # 遍歷使用者的答案(question: 題號, user_answer: 答案
 for question, user_answer in  user.items():
     # 檢查答案是否存在於標準答案中
