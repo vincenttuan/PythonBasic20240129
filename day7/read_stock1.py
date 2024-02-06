@@ -1,5 +1,5 @@
-# yield 殖利率 > 7%
-# PE 本益比 < 20
+# yield_r 殖利率 > 7%
+# PE 本益比 < 10
 # PB 股價淨值比 < 1
 file = open('stock.txt', 'r', encoding='UTF-8')
 rows = file.readlines()
@@ -15,4 +15,5 @@ for row in rows[2:]:
     yield_r = float(data[2])
     pe = float(data[4])
     pb = float(data[5])
-    print(data, symbol, name, yield_r, pe, pb)
+    if yield_r > 7 and pe < 10 and pb < 1:
+        print(symbol, name, yield_r, pe, pb)
