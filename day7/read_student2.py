@@ -8,8 +8,8 @@ count = 0      # 存放筆數(學生人數)
 for row in rows[1:]:
     # '劉一 18' 變成 ['劉一', '18']
     #                  0      1
-    data = row.strip().split(" ")
-    age = int(data[1])
+    name, age = row.strip().split(" ")
+    age = int(age)
     print(age)
     total_age += age  # 累計年齡
     count += 1        # 累計人次
