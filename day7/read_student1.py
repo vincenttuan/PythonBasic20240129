@@ -1,5 +1,5 @@
 # 讀取 student.txt 檔案內容
-# 目的: 可以計算學生平均年齡
+# 目的: 可以印出學生資料
 file = open('student.txt', 'r', encoding='UTF-8')
 # 讀取整個檔案內容到數組(rows)中
 rows = file.readlines()
