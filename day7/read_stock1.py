@@ -5,4 +5,6 @@ file = open('stock.txt', 'r', encoding='UTF-8')
 rows = file.readlines()
 
 for row in rows:
-    print(row.strip())
+    # 資料整理: 將 " 去除, 將 - 改成 -1
+    row = row.strip().replace('"', '').replace('-', '-1')
+    print(row)
