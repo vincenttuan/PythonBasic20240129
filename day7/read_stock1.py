@@ -15,5 +15,5 @@ for row in rows[2:]:
     yield_r = float(data[2])
     pe = float(data[4])
     pb = float(data[5])
-    if yield_r > 7 and pe < 10 and pb < 1:
+    if yield_r > 7 and 0 < pe < 10 and pb < 1:
         print(symbol, name, yield_r, pe, pb)
