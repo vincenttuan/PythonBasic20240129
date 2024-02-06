@@ -8,3 +8,11 @@ print('第一列資料:', rows[0].strip())  # strip() 去除後面的換行符�
 print('第二列資料:', rows[1].strip())
 print('第三列資料:', rows[2].strip())
 print('最末筆資料:', rows[len(rows)-1].strip())
+print('----------------------------')
+# 利用 for 迴圈將所有學生資料印出
+for row in rows:
+    print(row.strip())
+print('----------------------------')
+for i in range(0, len(rows)):
+    print(i, rows[i].strip())
+
