@@ -8,7 +8,7 @@ import datetime
 
 date = datetime.datetime(2024, 2, 5)
 url = 'https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=csv&date={}&selectType=ALL'
-url = url.format(date.strptime('%Y%m%d'))
+url = url.format(date.strftime('%Y%m%d'))
 print(url)
 
 
