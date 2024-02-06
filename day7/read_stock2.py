@@ -1,4 +1,5 @@
 # https://www.twse.com.tw/zh/trading/historical/bwibbu-day.html
+# https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=csv&date={}&selectType=ALL
 # yield_r 殖利率 > 7%
 # PE 本益比 < 10
 # PB 股價淨值比 < 1
