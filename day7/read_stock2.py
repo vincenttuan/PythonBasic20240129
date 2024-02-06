@@ -3,6 +3,15 @@
 # yield_r 殖利率 > 7%
 # PE 本益比 < 10
 # PB 股價淨值比 < 1
+import requests
+import datetime
+
+date = datetime.datetime(2024, 2, 5)
+url = 'https://www.twse.com.tw/exchangeReport/BWIBBU_d?response=csv&date={}&selectType=ALL'
+url = url.format(date.strptime('%Y%m%d'))
+print(url)
+
+
 file = open('stock.txt', 'r', encoding='UTF-8')
 rows = file.readlines()
 
