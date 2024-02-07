@@ -26,7 +26,7 @@ for i, youbike in enumerate(sorted_json_list):
     usage_rates.append(usage_rate)
 
 # 創建折線圖
-plt.plot(station_names, usage_rates, 'o-', color='red')
+plt.plot(station_names[:300], usage_rates[:300])
 # 設定圖形標籤與標題
 plt.xlabel('station name')
 plt.ylabel('usage_rate')
