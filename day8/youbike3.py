@@ -13,6 +13,7 @@ for youbike in json_list:
 # 利用 sorted() 排序, 可以加入 reverse=True 參數 (由大到小)
 sorted_json_list = sorted(json_list, key=lambda youbike: youbike['usage_rate'], reverse=True)
 
+# enumerate(sorted_json_list) 可以取得序號
 for i, youbike in enumerate(sorted_json_list):
     sna = youbike['sna']
     usage_rate = youbike['usage_rate']
