@@ -10,4 +10,10 @@ json_list = json.loads(requests.get(url).text)
 for youbike in json_list:
     youbike['usage_rate'] = float("%.2f" % (youbike['bemp']/youbike['tot'] * 100))
 
-print(json_list)
+# 利用 sorted() 排序, 可以加入 reverse=True 參數 (由大到小)
+sorted_json_list = sorted(json_list, key=lambda youbike: youbike['usage_rate'], reverse=True)
+
+for i, youbike in enumerate(sorted_json_list):
+    sna = youbike['sna']
+    usage_rate = youbike['usage_rate']
+    print('%d %s 使用率 %.1f %%' % (i+1, sna, usage_rate))
