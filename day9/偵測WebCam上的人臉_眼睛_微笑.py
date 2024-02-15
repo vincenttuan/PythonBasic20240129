@@ -3,7 +3,8 @@ import cv2
 # 人臉特徵檔
 face_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_frontalface_default.xml')
 # 眼睛特徵檔
-eye_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_eye.xml')
+#eye_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_eye.xml')  #  無帶眼鏡
+eye_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_eye_tree_eyeglasses.xml')  #  有帶眼鏡
 # 微笑特徵檔
 smile_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_smile.xml')
 
