@@ -11,7 +11,7 @@ smile_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_smile.xml')
 
 
 # 讀取影像檔
-frame = cv2.imread('sample_image/test.jpg')
+frame = cv2.imread('sample_image/tzuyu.jpg')
 # print(frame)
 # 將彩色圖片轉灰階, 目的:增加處理的效率
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -40,7 +40,7 @@ for (x, y, w, h) in faces:
     roi_gray = gray[y:y+h, x:x+w]  # 人臉區域-灰階(y, x)
     # 進行眼睛偵測
     eyes = eyes_cascade.detectMultiScale(
-        roi_gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
+        roi_gray, scaleFactor=1.1, minNeighbors=5, minSize=(10, 10), flags=cv2.CASCADE_SCALE_IMAGE)
     # 進行眼睛框線繪製
     for (ex, ey, ew, eh) in eyes:
         cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
