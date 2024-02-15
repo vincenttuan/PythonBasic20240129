@@ -13,6 +13,12 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
 while True:
     ret, frame = cap.read()
     # print(ret, frame)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(
+        gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE
+    )
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
     cv2.imshow('My Face', frame)
     # 按下 'q' 離開
