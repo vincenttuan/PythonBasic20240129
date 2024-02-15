@@ -26,7 +26,7 @@ for (x, y, w, h) in faces:
     # (x+w, y+h) : 右下角
     # (0, 255, 0) : BGR
     # 2 : 框線的寬度
-    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
 
 # 顯示圖片
 cv2.imshow('My Image', frame)
