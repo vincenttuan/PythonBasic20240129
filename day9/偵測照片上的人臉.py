@@ -4,7 +4,7 @@ import cv2  # 匯入 opencv 資源
 face_cascade = cv2.CascadeClassifier('haarcascade/haarcascade_frontalface_default.xml')
 
 # 讀取影像檔
-frame = cv2.imread('sample_image/test.jpg')
+frame = cv2.imread('sample_image/what.jpg')
 # print(frame)
 # 將彩色圖片轉灰階, 目的:增加處理的效率
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
