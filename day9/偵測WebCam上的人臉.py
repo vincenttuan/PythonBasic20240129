@@ -18,7 +18,10 @@ while True:
         gray, scaleFactor=1.1, minNeighbors=15, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE
     )
     for (x, y, w, h) in faces:
+        # 繪製框線
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
+        # 在框線上面撰寫文字
+        cv2.putText(frame, 'Teacher', (x, y), 16, 1.2, (255, 0 , 0), 2)
 
     cv2.imshow('My Face', frame)
     # 按下 'q' 離開
