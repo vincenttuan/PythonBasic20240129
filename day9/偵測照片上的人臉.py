@@ -19,8 +19,17 @@ faces = face_cascade.detectMultiScale(
     flags=cv2.CASCADE_SCALE_IMAGE  # 比對類型: 影像
 )
 print('臉部座標 (x, y, w, h)', faces)
+
+# 在 face 上劃出矩形
+for (x, y, w, h) in faces:
+    # (x, y) : 左上角
+    # (x+w, y+h) : 右下角
+    # (0, 255, 0) : BGR
+    # 2 : 框線的寬度
+    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
 # 顯示圖片
-cv2.imshow('My Image', gray)
+cv2.imshow('My Image', frame)
 
 # 在圖片上按下任意鍵離開
 c = cv2.waitKey(0)
