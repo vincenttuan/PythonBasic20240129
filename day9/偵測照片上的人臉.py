@@ -18,7 +18,7 @@ faces = face_cascade.detectMultiScale(
     minSize=(30, 30),  # 搜尋比對最小尺寸
     flags=cv2.CASCADE_SCALE_IMAGE  # 比對類型: 影像
 )
-
+print('臉部座標 (x, y, w, h)', faces)
 # 顯示圖片
 cv2.imshow('My Image', gray)
 
